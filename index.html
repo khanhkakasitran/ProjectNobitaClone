@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobita Book Store Clone</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="root">
+        <!-- TOPBAR -->
+        <div id="topbar">
+            <div class='topBar'>
+                <div class='topLeft'>
+                    <img class='logoMain' src="./assets/img/logo.png" alt="Logo Nobita.vn" />
+                </div>
+                <div class='topCenter'>
+                    <input id='search' type="text" />
+                    <button class='btnSearch'>Tìm</button>
+                </div>
+                <div class='topRight'>
+                    <ul class="topList">
+                        <li class="topListItem">
+                            <a href="">
+                                Tài khoản của bạn
+                                <i class="topListIcon fas fa-user"></i>
+                            </a>
+                            <div class='subContent'>
+                                <ul class='subContentList'>
+                                    <li class='subContentItem'>
+                                        <a href="">
+                                            <i class="subContentIcon fab fa-facebook-f"></i>
+                                            <span>Tài khoản Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class='subContentItem'>
+                                        <a href="">
+                                            <span>Đăng nhập</span>
+                                        </a>
+                                    </li>
+                                    <li class='subContentItem'>
+                                        <p>Khách hàng mới?</p>
+                                        <a href="">
+                                            <span>Tạo tài khoản</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="topListItem">
+                            <a href="">
+                                Giỏ hàng
+                                <span>(0)</span>
+                                <i class="topListIcon fas fa-shopping-cart"></i>
+                            </a>
+                            <div class='subContentCart'>
+                                <h3 class='subContentTitle'>Giỏ hàng</h3>
+                                <span class='subContentDesc'>Giỏ hàng chưa có sản phẩm</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <div id="navbar">
+            <div class='mainMenu'>
+                <div class='listMenu'>
+                    <span>
+                        <h6><i class="fas fa-bars"></i> DANH MỤC SẢN PHẨM</h6>
+                    </span>
+                    <ul class="menuList">
+                        <li class='menuListItem'>
+                            <a href="">
+                                Nổi bật
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách bán chạy</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách mới</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách giảm giá</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sắp phát hành</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Sách kinh tế
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu2'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tài chính - Kế toán</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Quản trị - Lãnh đao</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Marketing - Bán hàng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Kỹ năng làm việc</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Kinh tế học</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Khởi nghiệp</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Doanh nhân - Tập đoàn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Bài học kinh doanh</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Văn học nước ngoài
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu3'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tiểu sử - Hồi ký</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện lịch sử - Kiếm hiệp</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện ngắn - Tản văn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tác phẩm kinh điển</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Huyền bí - Giả tưởng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện trinh thám - Kinh dị</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tiểu thuyết tình cảm - Lãng mạn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tiểu thuyết đam mỹ</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Bách hợp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Văn học trong nước
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu4'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tiểu thuyết</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện ngắn - Tản văn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Huyền bí - Giả tưởng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Phóng sự - Ký sự</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Trinh thám - Kinh dị</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tiểu sử - Hồi ký</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Sách kĩ năng sống
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu5'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Kĩ năng sống</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Nghệ thuật sống đẹp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Sách tuổi teen
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu6'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Văn học teen</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Hướng nghiệp - Kĩ năng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Light Novel</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện tranh, Comic</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Học ngoại ngữ
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu7'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Từ điển</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách học tiếng Anh</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách học tiếng Hoa</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Sách học tiếng Nhật</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Sách thiếu nhi <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu8'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện cổ tích - Thần thoại</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Vừa học vừa chơi</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Kiến thức - Kĩ năng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Văn học</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Truyện kể cho bé</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Thưởng thức đời sống
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu9'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Văn hoá - Du lịch</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Chăm sóc sức khoẻ</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Phong thuỷ - Nhà cửa</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Nấu ăn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Thể thao - Giải trí</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Sách chuyên ngành
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu10'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Giáo dục</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Công nghệ thông tin</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Lịch sủ - Địa lý</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Khoa học tự nhiên</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Mỹ thuật - Kiến trúc</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Chính trị - Triết học</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Doanh nhân - Người nổi tiếng</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Tâm linh - Tôn giáo</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Y dược</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Khoa học xã hội</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Văn phòng phẩm - Quà tặng
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu11'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Bóp viết - Họp bút</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Bình nước, Bình giữ nhiệt</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Phụ kiện, Quà tặng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='menuListItem'>
+                            <a href="">
+                                Công ty phát hành
+                                <i class="menuListIcon fas fa-chevron-right"></i>
+                            </a>
+                            <div class='subMenu12'>
+                                <ul class='subMenuList'>
+                                    <li class='subMenuItem'>
+                                        <a href="">Thái Hà</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Alphabooks</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Owlbooks</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Quảng Văn</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Limbooks</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Asbooks</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Đinh Tị</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Phương Nam</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">Văn Lang</a>
+                                    </li>
+                                    <li class='subMenuItem'>
+                                        <a href="">NXB Trẻ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BANNER -->
+                <div class="banner">
+                    <div class='hotline'>
+                        <span>
+                            <i class="fas fa-phone">&nbsp;</i>
+                            <strong>Hotline:&nbsp;</strong>
+                        </span>
+                        <span>
+                            <b>0938 424 289</b>
+                        </span>
+                    </div>
+
+                    <!-- SLIDESHOW -->
+                    <div id="slideshow">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="./assets/img/doc-gia-2019.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/sci-2020.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/sci-tap-4.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/artemis.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/atta.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/luc-xu-qc.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/song-ngam.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/the-vi-thuong.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./assets/img/thoi-gian-vun-vo.jpg" style="width:100%">
+                            </div>
+                            <!-- Next and previous buttons -->
+                            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                        </div>
+                        <!-- The dots/circles -->
+                        <div class="dots">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  PRODUCT-->
+        <div id="products">
+            <!-- NEW PRODUCTS -->
+            <div id="new-products">
+                <h2 class="products-title">
+                    <a class="title title-neft" style="padding-right: 29px;" href="">
+                        Sách Mới
+                    </a>
+                    <a class="more" href="">Xem tất cả</a>
+                </h2>
+                <div class="products-contents-item">
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PUBLISHING PRODUCTS -->
+            <div id="publishing-products">
+                <h2 class="products-title">
+                    <a class="title" href="">
+                        Sắp Phát Hành
+                    </a>
+                    <a class="more" href="">Xem tất cả</a>
+                </h2>
+                <div class="products-contents-item">
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BESTSELER PRODUCTS -->
+            <div id="bestseler-products">
+                <h2 class="products-title">
+                    <a class="title" href="">
+                        Sách Bán Chạy
+                    </a>
+                    <a class="more" href="">Xem tất cả</a>
+                </h2>
+                <div class="products-contents-item">
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off active">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">Veil - Sắc Đen Trầm Lặng (Tập 1, 2, 3 bản siêu đặc biệt)</a>
+                        </h4>
+                        <h5 class="products-origin-name">
+                            <a href=""> Koterri!</a>
+                        </h5>
+                        <div class="products-price">
+                            <span class="products-price-curent"> 710.000 ₫</span>
+                            <span class="products-price-old"> 400.000 ₫</span>
+                        </div>
+                        <div class="products-sale-off">
+                            <span class="products-sale-off-percent">
+                                -15%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOP CATEGORY PRODUCTS -->
+            <div id="top-categories-products">
+                <h2 class="products-title">
+                    <a class="title title-neft" href="">
+                        Danh Mục
+                    </a>
+                    <a class="more" href="">Xem tất cả</a>
+                </h2>
+                <div class="products-contents-item">
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Sách Kinh Tế</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Văn Học Nước Ngoài</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>
+                                    Văn Học Trong Nước
+                                </b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Sách Kỹ Năng Sống</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Sách Tuổi Teen</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Học Ngoại Ngữ - Từ Điển</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Sách Thiếu Nhi</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Thưởng Thức Đời Sống</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Sách Chuyên Ngành</b>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="products-contents">
+                        <div class="products-img">
+                            <img src="./assets/img/veil.jpg" alt="">
+                        </div>
+                        <h4 class="products-name">
+                            <a href="">
+                                <b>Văn Phòng Phẩm - Quà Tặng</b>
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENT SEOHOME -->
+            <div id="content-seohome">
+                <h1>
+                    <span>
+                        Mua Sách Online Tại Nobita.vn
+                    </span>
+                </h1>
+                <p>
+                    <span>
+                        Ra đời từ năm 2011, đến nay <strong>Nobita.vn</strong> đã trở thành địa chỉ
+                        <a href="http://nobita.vn/">mua sách online</a> quen thuộc của hàng ngàn độc giả trên cả nước.
+                        Với đầu sách phong phú, thuộc các thể loại:
+                        <a href="">Văn học nước ngoài,</a>
+                        <a href="">Văn học trong nước,</a>
+                        <a href="">Kinh tế,</a>
+                        <a href="">Kỹ năng sống,</a>
+                        <a href="">Thiếu nhi,</a>
+                        <a href="">Sách chuyên ngành,</a>
+                        <a href="">Sách ngoại ngữ</a>,... được cập nhật liên tục từ các nhà xuất bản uy tín trong nước.
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        Khi mua sách online tại Nobita.vn. Quý khách được <strong>Bọc plastic miễn phí đến 99%</strong>
+                        (trừ sách
+                        bìa cứng, sách dạng hộp - dạng đặc biệt, sách khổ quá to, ...)
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        Ngoài ra với hình thức <strong>Giao hàng thu tiền tận nơi</strong> và <strong>Đổi hàng trong
+                            vòng 7 ngày </strong>nếu sách có
+                        bất kỳ lỗi nào trong quá trình in ấn sẽ giúp Quý khách yên tâm hơn khi mua sắm tại Nobita.vn.
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li class="footer-menu-item">
+                        Hỗ Trợ Khách Hàng
+                        <ul class="footer-sublist">
+                            <li class="footer-subitem">
+                                Email: admin@nobita.vn
+                            </li>
+                            <li class="footer-subitem">
+                                Hotline: <b> 0938 424 289</b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer-menu-item">
+                        Giới Thiệu
+                        <ul class="footer-sublist">
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Về nobita
+                                </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href=""> 
+                                    Tuyển dụng
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer-menu-item">
+                        Tài Khoản
+                        <ul class="footer-sublist">
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Tài khoản
+                                </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Danh sách đơn hàng
+                                </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Thông báo
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer-menu-item">
+                        Hướng Dẫn
+                        <ul class="footer-sublist">
+                            <li class="footer-subitem">
+                               <a href="">
+                                Hướng dẫn mua hàng
+                               </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Phương thức thanh toán
+                                </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Phương thức vận chuyển
+                                </a>
+                            </li>
+                            <li class="footer-subitem">
+                                <a href="">
+                                    Câu hỏi thường gặp
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-address">
+                <p>
+                    Copyright © 2014 Nobita.vn
+                </p>
+                <p>
+                    Địa chỉ: 25/5 Thăng Long, P. 4, Quận Tân Bình, TP. Hồ Chí Minh
+                </p>
+                <a href="http://online.gov.vn/Home/WebDetails/9908" target="_blank">
+                    <img src="./assets/img/xdathongbao-1.png.pagespeed.ic.mjWZ-xNf22.png" alt="">
+                </a>
+                <p>
+                    Công ty lắp camera quan sát  Dịch vụ lắp camera quan sát  lắp báo động chống trộm
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
